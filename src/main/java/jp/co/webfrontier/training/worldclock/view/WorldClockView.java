@@ -8,14 +8,14 @@ import de.saxsys.mvvmfx.InjectViewModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import jp.co.webfrontier.training.worldclock.viewmodel.HelloWorldViewModel;
+import jp.co.webfrontier.training.worldclock.viewmodel.WorldClockViewModel;
 
-public class HelloWorldView implements FxmlView<HelloWorldViewModel>, Initializable {
+public class WorldClockView implements FxmlView<WorldClockViewModel>, Initializable {
     @FXML
     private Label helloLabel;
 
     @InjectViewModel
-    private HelloWorldViewModel viewModel;
+    private WorldClockViewModel viewModel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

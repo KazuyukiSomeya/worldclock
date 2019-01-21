@@ -14,8 +14,8 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import jp.co.webfrontier.training.worldclock.view.HelloWorldView;
-import jp.co.webfrontier.training.worldclock.viewmodel.HelloWorldViewModel;
+import jp.co.webfrontier.training.worldclock.view.WorldClockView;
+import jp.co.webfrontier.training.worldclock.viewmodel.WorldClockViewModel;
 
 public class App extends Application {
 
@@ -25,7 +25,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        ViewTuple<HelloWorldView, HelloWorldViewModel> viewTuple = FluentViewLoader.fxmlView(HelloWorldView.class).load();
+        ViewTuple<WorldClockView, WorldClockViewModel> viewTuple = FluentViewLoader.fxmlView(WorldClockView.class).load();
 
         Parent root = viewTuple.getView();
         stage.setScene(new Scene(root));

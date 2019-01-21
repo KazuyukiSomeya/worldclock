@@ -4,7 +4,7 @@ import de.saxsys.mvvmfx.ViewModel;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class HelloWorldViewModel implements ViewModel {
+public class WorldClockViewModel implements ViewModel {
     private StringProperty helloMessage = new SimpleStringProperty("Hello World");
 
     public StringProperty helloMessageProperty(){
