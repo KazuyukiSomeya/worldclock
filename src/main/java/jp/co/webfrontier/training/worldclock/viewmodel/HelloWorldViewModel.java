@@ -1,4 +1,4 @@
-package jp.co.webfrontier.training.rps.viewmodel;
+package jp.co.webfrontier.training.worldclock.viewmodel;
 
 import de.saxsys.mvvmfx.ViewModel;
 import javafx.beans.property.SimpleStringProperty;

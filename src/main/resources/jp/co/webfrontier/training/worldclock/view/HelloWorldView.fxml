@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="jp.co.webfrontier.training.rps.view.HelloWorldView">
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="jp.co.webfrontier.training.worldclock.view.HelloWorldView">
   <children>
     <Label fx:id="helloLabel"/>
   </children>
