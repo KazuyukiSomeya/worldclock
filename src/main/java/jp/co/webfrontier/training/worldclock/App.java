@@ -40,7 +40,6 @@ public class App extends MvvmfxGuiceApplication {
         stage.setTitle("世界時計");
         stage.setMinWidth(400);
         stage.setMinWidth(300);
-        stage.setMaximized(false);
 
         Parent root = viewTuple.getView();
         stage.setScene(new Scene(root));

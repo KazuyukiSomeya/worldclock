@@ -52,7 +52,6 @@ public class WorldClockView implements FxmlView<WorldClockViewModel>, Initializa
         stage.setTitle("設定");
         stage.setMinWidth(400);
         stage.setMinWidth(300);
-        stage.setMaximized(false);
         stage.setScene(new Scene(root));
         stage.show();
     }
