@@ -10,31 +10,34 @@ import org.slf4j.LoggerFactory;
 
 import de.saxsys.mvvmfx.FluentViewLoader;
 import de.saxsys.mvvmfx.ViewTuple;
-import javafx.application.Application;
+import de.saxsys.mvvmfx.guice.MvvmfxGuiceApplication;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import jp.co.webfrontier.training.worldclock.view.WorldClockView;
 import jp.co.webfrontier.training.worldclock.viewmodel.WorldClockViewModel;
 
-public class App extends Application {
+public class App extends MvvmfxGuiceApplication {
 
     public static void main(String...args){
         App.launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void startMvvmfx(Stage stage) throws Exception {
+
         ViewTuple<WorldClockView, WorldClockViewModel> viewTuple = FluentViewLoader.fxmlView(WorldClockView.class).load();
+
+        stage.setTitle("世界時計");
+        stage.setMinWidth(400);
+        stage.setMinWidth(300);
+        stage.setMaximized(false);
 
         Parent root = viewTuple.getView();
         stage.setScene(new Scene(root));
         stage.show();
 
         Logger logger = LoggerFactory.getLogger(App.class);
-
-        ch.qos.logback.classic.Logger log = (ch.qos.logback.classic.Logger)logger;
-
-        logger.debug("debug message");
+        logger.debug("アプリケーションが開始されました");
     }
 }
