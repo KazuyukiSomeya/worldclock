@@ -8,18 +8,27 @@ package jp.co.webfrontier.training.worldclock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
 import de.saxsys.mvvmfx.FluentViewLoader;
 import de.saxsys.mvvmfx.ViewTuple;
 import de.saxsys.mvvmfx.guice.MvvmfxGuiceApplication;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import jp.co.webfrontier.training.worldclock.di.WorldClockModule;
 import jp.co.webfrontier.training.worldclock.view.WorldClockView;
 import jp.co.webfrontier.training.worldclock.viewmodel.WorldClockViewModel;
 
 public class App extends MvvmfxGuiceApplication {
 
+	private static Injector injector;
+
     public static void main(String...args){
+
+        injector = Guice.createInjector(new WorldClockModule());
+
         App.launch(args);
     }
 

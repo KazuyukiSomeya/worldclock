@@ -67,6 +67,7 @@ public enum City {
 	private static EnumMap<City, ZoneOffset> offsetHoursMap;
 
 	static {
+		// https://citizen.jp/support/useful/worldtimediff.html
 		offsetHoursMap = new EnumMap<City, ZoneOffset>(City.class);
 		offsetHoursMap.put(ATH, ZoneOffset.of("+02"));
 		offsetHoursMap.put(BJS, ZoneOffset.of("+08"));
