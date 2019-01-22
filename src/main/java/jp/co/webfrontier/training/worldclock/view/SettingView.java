@@ -1,7 +1,6 @@
 package jp.co.webfrontier.training.worldclock.view;
 
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 import org.slf4j.Logger;
@@ -9,7 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -47,13 +45,6 @@ public class SettingView implements FxmlView<SettingViewModel>, Initializable {
         = FXCollections.observableArrayList(City.values());
 
     	cityChoiceBox.getItems().addAll(list);
-        cityChoiceBox.valueProperty().addListener(
-                (ObservableValue<? extends City> observable,
-                 City oldValue, City newValue) -> {
-            if (Objects.nonNull(newValue)) {
-            	logger.debug(oldValue.toString() + " " + newValue.toString());
-            }
-        });
         cityChoiceBox.setValue(viewModel.getCurrentCity());
         clockFormat12HoursCheckBox.setSelected(viewModel.isCurrentTimeFormat24Hours());
     }
